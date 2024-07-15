@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="logo.png" alt="Starbucks Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact us</a></li>   
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>The Coffee Belt is divided into three main growing regions: Latin America, Africa and
+                    Asia / Pacific. We responsibly source, roast and blend coffees from each of these
+                     three regions to bring you unique coffees. Just like tea or wine, coffee gets much 
+                     of its flavor from where it comes from. Each of these growing regions has different
+                      growing conditions and traditions that affect the overall flavor of the coffee.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks" alt="Starbucks Coffee">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')" 
+                alt="Thumbnail 1"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"
+                 alt="Thumbnail 2"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')" 
+                alt="Thumbnail 3"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>        
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(image){
+            document.querySelector('.starbucks').src = image;
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
